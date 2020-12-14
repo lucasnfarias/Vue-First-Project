@@ -1,6 +1,6 @@
 <template>
   <comments-container>
-    <h1>{{ header }}</h1>
+    <h1>Primeiro projeto com Vue</h1>
     <comment-form>
       <div>
         <label for="input-name">Nome</label>
@@ -40,9 +40,6 @@ export default {
     'comment-form': CommentForm,
     'no-comments': NoComments,
     'comments-list': CommentList,
-  },
-  props: {
-    header: String
   },
   data() {
     return {

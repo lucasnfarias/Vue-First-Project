@@ -57,15 +57,22 @@ export const CommentForm = styled.form`
 
 export const CommentButton = styled('button', buttonProps)`
   display: flex;
-  width: 50%;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  padding: 12px 40px;
   margin-top: 16px;
   border-radius: 8px;
-  background: ${({ hasComment }) => hasComment ? colors.orange : colors.mediumGray};
+  border: 2px solid ${({ hasComment }) => hasComment ? colors.lightBlue : colors.mediumGray};
+  background: ${({ hasComment }) => hasComment ? colors.lightBlue : colors.mediumGray};
   color: ${colors.white};
   font-weight: bold;
+  transition: color 0.6s, background-color 0.6s;
+
+  &:hover {
+    transition: color 0.6s, background-color 0.6s;
+    color: ${colors.lightBlue};
+    background: transparent;
+  }
 `;
 
 export const NoComments = styled.div`
@@ -118,8 +125,8 @@ export const CommentList = styled.ul`
       display: flex;
       width: fit-content;
       background: transparent;
-      color: ${colors.pink};
-      font-weight: bold;
+      color: ${colors.yellow};
+      font-weight: 500;
       transition: text-decoration 0.5s, color 0.5s;
 
       &:hover {
