@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <CommentList header="Primeiro projeto com Vue"/>
+    <Header />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import CommentList from './components/CommentList/index';
+import Header from './components/Header';
 
 export default {
   name: 'App',
   components: {
-    CommentList
+    Header,
   }
 }
 </script>
